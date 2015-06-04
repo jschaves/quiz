@@ -4,6 +4,7 @@
 # exclude patterns (uncomment them if you want to use them):
 # *.[oa]
 # *~
-node-modules
+node_modules
 .DS_Store
 npm-debuf.log
+.env
