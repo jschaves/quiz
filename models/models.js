@@ -35,11 +35,7 @@ exports.Quiz = Quiz; // Exportar la definicion de la tabla Quiz
 sequelize.sync().then(function() {
 	// then(...) ejecuta el namejador una vez creada la tabla
 	Quiz.count().then(function (count) {
-		if(count === 0) {  // La tabla se inicializa solo si esta vacia
-			Quiz.create({
-							pregunta: 'Capital de Italia',
-							respuesta: 'Roma'
-						});
+		if(count === 1) {  // La tabla se inicializa solo si esta vacia
 			Quiz.create({
 							pregunta: 'Capital de Portugal',
 							respuesta: 'Lisboa'
