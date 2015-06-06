@@ -28,3 +28,7 @@ nav span {
 .photo {
 	width: 7%;
 }
+.search {
+    border: 1px solid;
+    padding: 2%;
+}
