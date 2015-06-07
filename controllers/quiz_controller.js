@@ -28,7 +28,7 @@ exports.index = function(req, res, next){
 					}
 				).then(
 					function(s) {// Pasamos los datos a la vista con busqueda
-						res.render('quizes/index', { quizes: quizes, search: s});
+						res.render('quizes/index', { quizes: undefined, search: s});
 					}
 				).catch(function(error) { next(error);});
 			} else {// Pasamos a la vista sin busqueda

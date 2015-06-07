@@ -7,9 +7,11 @@
 	<tr>
 		<td>
 			<table class="search">
-				<tr><td>Preguntas:</td></tr>
-				<% var i; for (i=0; i < quizes.length; i++) { %>
-					<tr><td><a href="quizes/<%= quizes[i].id %>"><%= quizes[i].pregunta %></a></td></tr>
+				<% if(quizes !== undefined  && quizes !== '') { %>
+					<tr><td>Preguntas:</td></tr>
+					<% var i; for (i=0; i < quizes.length; i++) { %>
+						<tr><td><a href="quizes/<%= quizes[i].id %>"><%= quizes[i].pregunta %></a></td></tr>
+					<% } %>
 				<% } %>
 			</table>
 		</td>
@@ -18,7 +20,7 @@
 				<% if(search !== undefined  && search !== '') { %>
 					<tr><td>Resultados de la búsqueda:</td></tr>
 					<% var x; for (x=0; x < search.length; x++) { %>
-						<tr><td><%= search[x].pregunta %></td></tr>
+						<tr><td><a href="quizes/<%= search[x].id %>"><%= search[x].pregunta %></a></td></tr>
 					<% } %>
 				<% } %>
 			</table>		
